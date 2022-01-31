@@ -45,7 +45,6 @@ const config = {
     ],
     collapsedNav: [
       '/codeblock', // add trailing slash if enabled above
-      '/gcp', // add trailing slash if enabled above
       '/aws', // add trailing slash if enabled above
       '/azure', // add trailing slash if enabled above
     ],
