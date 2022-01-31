@@ -1,5 +1,5 @@
 ---
-title: "GCE - Google Compute Engine"
+title: "Google Compute Engine"
 metaTitle: "Google Compute Engine"
 metaDescription: "gcloud command line"
 ---
@@ -8,7 +8,7 @@ metaDescription: "gcloud command line"
 glcoud sdk 설치: https://cloud.google.com/sdk 
 
 ```  
-
+# GCE - Google Compute Engine  
 ## GCE 개요 svg // TODO
 
 ## gcloud login (로그인)
