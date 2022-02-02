@@ -28,15 +28,22 @@ tutor-toronto     northamerica-northeast2-a  zone            10       pd-balance
 
 ## 디스크 연결 
 `attach-disk` 명령 사용   
-`rw` 읽고 쓰기
-$`gcloud compute instances attach-disk tutor-us --zone us-central1-a --disk disk-1 --mode rw`
+`rw` 읽고 쓰기  
+$`gcloud compute instances attach-disk tutor-us --zone us-central1-a --disk disk-1 --mode rw`  
 
-`ro`: read only ; 읽기 전용
-$`gcloud compute instances attach-disk totur-us --zone us-central1-a --disk disk-1 --mode ro`
+`ro`: read only ; 읽기 전용  
+$`gcloud compute instances attach-disk totur-us --zone us-central1-a --disk disk-1 --mode ro`  
 
-## 디스크 사용 
+## 디스크 사용  
 ```
-# 
+# 두 인스턴스에서 분리 
+gcloud compute instances detach-disk instance-1 \
+--zone us-central1-a --disk disk-1
+# 읽고 쓰기 모드로 다시 연결
+gcloud compute instances attach-disk instance-1 \
+--zone us-central1-a --disk disk-1 --mode rw 
+
 ```
+
 
 
