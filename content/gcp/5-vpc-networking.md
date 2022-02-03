@@ -404,12 +404,16 @@ EXTERNAL_IPV6_CIDR_RANGE:
 ![capture 2022-02-03 PM 2 30 56](https://user-images.githubusercontent.com/16316626/152286810-1181d13d-7c16-4881-bd4f-ec4c671229dd.png)
 
 ## Friewall
-|--|--|
-|Property	|Value (type value or select option as specified)|
-|Name|	managementnet-allow-icmp-ssh-rdp|
-|Network|	managementnet|
-|Targets|	All instances in the network|
-|Source filter	|IPv4 Ranges|
-|Source IPv4 ranges	|0.0.0.0/0|
-|Protocols and ports|	Specified protocols and ports|
+|--|--|  
+|Property	|Value (type value or select option as specified)|  
+|Name|	managementnet-allow-icmp-ssh-rdp|  
+|Network|	managementnet|  
+|Targets|	All instances in the network|  
+|Source filter	|IPv4 Ranges|  
+|Source IPv4 ranges	|0.0.0.0/0|  
+|Protocols and ports|	Specified protocols and ports|  
+
+![image](https://user-images.githubusercontent.com/16316626/152287049-ede51196-884c-42b6-9966-3f6bcf3bf470.png)
+
+
 
