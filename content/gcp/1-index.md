@@ -14,7 +14,30 @@ metaDescription: "This is the meta description for this page"
 ## Google Cloud 제품
 https://cloud.google.com/products#top_of_page
 
+## VM insatnace 생성
+gcloud compute instances create gcelab2 --machine-type n1-standard-2 --zone us-central1-f
 
-```javascript react-live=true
-<button className={'btn btn-default'}>Change my text</button>
+### ssh 연결
+gcloud compute ssh gcelab2 --zone us-central1-f
+
+
+### Referens Link
+[커스텀 VM 만들기](https://cloud.google.com/compute/docs/instances/creating-instance-with-custom-machine-type)
+[머신 계열](https://cloud.google.com/compute/docs/machine-types)
+[API 디자인 가이드](https://cloud.google.com/apis/design/)   
+[google APIs Explorer](https://developers.google.com/apis-explorer/#p/)  
+
+[gcloud 도구 개요](https://cloud.google.com/sdk/gcloud)  
+[리전 및 영역](https://cloud.google.com/compute/docs/regions-zones/)  
+[Linux VM에 연결](https://cloud.google.com/compute/docs/instances/connecting-to-instance)  
+  
+  
+https://stackoverflow.com/questions/57406218/what-does-ps-auwx-grep-nginx-means
 ```
+a lift 'only yourself' restriction -> list all processes with a terminal.
+u 'user format' -> provides additional information columns.
+w wide output -> for when you have a screen wide enough to show all info.
+x lift 'must have terminal' restriction -> a+x == list everything.
+```
+
+
