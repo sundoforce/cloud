@@ -127,6 +127,7 @@ gcloud compute ssh [instance 이름]  --zone $ZONE
   
   
 https://stackoverflow.com/questions/57406218/what-does-ps-auwx-grep-nginx-means
+
 ```
 a lift 'only yourself' restriction -> list all processes with a terminal.
 u 'user format' -> provides additional information columns.
