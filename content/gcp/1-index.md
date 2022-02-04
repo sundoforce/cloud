@@ -20,6 +20,97 @@ gcloud compute instances create gcelab2 --machine-type n1-standard-2 --zone us-c
 ### ssh 연결
 gcloud compute ssh gcelab2 --zone us-central1-f
 
+## Cloud shell 
+zone, region 가져오기 
+
+gcloud config get-value compute/zone
+gcloud config get-value compute/region
+
+### 제대로 되지 않은 경우 
+Click Navigation menu (Navigation menu), and then click Home > Dashboard.
+
+gcloud compute project-info describe --project <your_project_ID>
+
+#### 환경 변수 지정 
+export PROJECT_ID=<your_project_ID>
+export ZONE=<your_zone>
+
+## VM 생성 
+
+gcloud compute instances create test2 --machine-type n1-standard-2 --zone $ZONE
+```
+Created [https://www.googleapis.com/compute/v1/projects/id/zones/us-central1-a/instances/gcelab2].
+NAME: test2
+ZONE: us-central1-a
+MACHINE_TYPE: n1-standard-2
+PREEMPTIBLE:
+INTERNAL_IP: 10.128.0.2
+EXTERNAL_IP: 
+STATUS: RUNNING
+```
+**Command details**
+
+* `gcloud compute` allows you to manage your Compute Engine resources in a format that's simpler than the Compute Engine API.
+
+* `instances create`  creates a new instance.
+
+* `test2` is the name of the VM.
+
+* The `--machine-type` flag specifies the machine type as n1-standard-2.
+
+* The `--zone` flag specifies where the VM is created.
+
+* If you omit the `--zone` flag, the `gcloud` tool can infer your desired zone based on your default properties.   
+Other required instance settings, such as machine type and image, are set to default values if not specified in the create command.
+
+## Help Command 
+
+gcloud compute instances create --help
+
+### Explore gcloud commands
+gcloud -h
+
+gcloud config --help
+gcloud help config
+gcloud config list
+gcloud config list --all
+gcloud components list
+
+# 2: Install a new component
+
+## 자동 완성 모드 
+**Auto-complete mode**
+$sudo apt-get install google-cloud-sdk
+$gcloud beta interactive
+
+
+```
+gcloud beta interactive
+Welcome to the gcloud interactive shell environment.
+
+    Tips:
+
+      o start by typing commands to get auto-suggestions and inline help
+      o use tab, up-arrow, or down-arrow to navigate completion dropdowns
+      o use space or / to accept the highlighted dropdown item
+      o run gcloud <alpha|beta> interactive --help for more info
+
+    Run $ gcloud feedback to report bugs or request new features.
+```
+
+gcloud compute instances describe <your_vm>
+
+### SSH 접속
+gcloud compute ssh [instance 이름]  --zone $ZONE
+
+
+### Google Cloud services
+
+* Cloud Console  
+* Command-line interface  
+* Client libraries
+
+
 
 ### Referens Link
 [커스텀 VM 만들기](https://cloud.google.com/compute/docs/instances/creating-instance-with-custom-machine-type)
