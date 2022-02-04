@@ -32,13 +32,14 @@ gcloud config get-value compute/region
 
 ### 제대로 되지 않은 경우 
 Click Navigation menu (Navigation menu), and then click Home > Dashboard.
-
+```
 gcloud compute project-info describe --project <your_project_ID>
-
+```
 #### 환경 변수 지정 
+```
 export PROJECT_ID=<your_project_ID>
 export ZONE=<your_zone>
-
+```
 ## VM 생성 
 
 gcloud compute instances create test2 --machine-type n1-standard-2 --zone $ZONE
