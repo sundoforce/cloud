@@ -117,6 +117,11 @@ gcloud compute ssh [instance 이름]  --zone $ZONE
 * Command-line interface  
 * Client libraries
 
+# Cloud Shell
+* `gcloud`: for working with Compute Engine, Google Kubernetes Engine (GKE) and many Google Cloud services
+* `gsutil`: for working with Cloud Storage
+* `kubectl`: for working with GKE and Kubernetes
+* `bq`: for working with BigQuery
 
 
 ### Referens Link
