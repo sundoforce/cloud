@@ -74,5 +74,58 @@ sudo java -Xmx1024M -Xms1024M -jar server.jar nogui
 
 ### 트러블슈팅
 **eula.txt**
-`eula=true'
+`eula=true`
+
+## Create a virtual terminal screen to start the Minecraft server
+
+sudo apt-get install -y screen
+sudo screen -S mcs java -Xmx1024M -Xms1024M -jar server.jar nogui
+
+
+## Detach from the screen and close your SSH session
+sudo screen -r mcs
+
+## Allow client traffic
+### Create a firewall rule
+
+![image](https://user-images.githubusercontent.com/16316626/152447704-4698265e-be5b-40f1-9ab9-50c3ab5754b7.png)
+
+
+![image](https://user-images.githubusercontent.com/16316626/152447853-614cd71a-29e2-4834-8dc3-1206b6538508.png)
+
+## 5: Schedule regular backups
+ gsutil mb gs://$YOUR_BUCKET_NAME-minecraft-backup
+  gsutil mb gs://$YOUR_BUCKET_NAME-minecraft-backup
+  
+**Backup.sh**
+
+```
+#!/bin/bash
+screen -r mcs -X stuff '/save-all\n/save-off\n'
+/usr/bin/gsutil cp -R ${BASH_SOURCE%/*}/world gs://${YOUR_BUCKET_NAME}-minecraft-backup/$(date "+%Y%m%d-%H%M%S")-world
+screen -r mcs -X stuff '/save-on\n'
+```
+
+sudo chmod 755 /home/minecraft/backup.sh
+. /home/minecraft/backup.sh
+
+sudo crontab -e
+```
+0 */4 * * * /home/minecraft/backup.sh
+```
+
+# Server maintenance
+
+## 정지
+sudo screen -r -X stuff '/stop\n'
+
+## Automate server maintenance with startup and shutdown scripts
+
+![image](https://user-images.githubusercontent.com/16316626/152448645-26dc95ae-b4ca-4ac1-b3c6-fb54cfdfe9ee.png)
+
+https://storage.googleapis.com/cloud-training/archinfra/mcserver/startup.sh
+
+https://storage.googleapis.com/cloud-training/archinfra/mcserver/shutdown.sh
+
+
 
