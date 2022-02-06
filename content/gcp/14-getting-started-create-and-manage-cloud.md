@@ -78,7 +78,7 @@ kubectl create deployment sdk-server \
 ```
 kubectl expose deployment sdk-server \
           --type=LoadBalancer \
-          --port 8080
+          --port {port}
 ```
 
 # Task 3. Set up an HTTP load balancer  
