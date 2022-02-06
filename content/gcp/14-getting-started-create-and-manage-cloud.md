@@ -128,9 +128,7 @@ gcloud compute instance-groups managed create sdk-mig \
 
 ```
 gcloud compute firewall-rules create {role-name} \
-          --allow tcp:80 \
-          --network sdk-vpc \
-          --rules=tcp:80
+          --allow tcp:80 
 ```
 
 ## Create a health check.
