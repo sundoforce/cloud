@@ -120,7 +120,7 @@ gcloud compute instance-groups managed create sdk-mig \
           --size 2 \
           --template sdk-it \
           --region us-east1 \
-          -–target-pool sdk-tp       
+          --target-pool sdk-tp       
 ```
 
 ## Create a firewall rule named as Firewall rule to allow traffic (80/tcp).  
