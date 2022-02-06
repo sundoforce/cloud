@@ -119,15 +119,6 @@ gcloud compute instance-groups managed create sdk-mig \
           --region us-east1 \
           -–target-pool sdk-tp       
 ```
-<!-- 
-```
-gcloud compute instance-groups managed \
-          set-named-ports sdk-mig \
-          --named-ports http:80 \
-          --region us-east1
-      
-``` -->
-
 
 ## Create a firewall rule named as Firewall rule to allow traffic (80/tcp).  
 > 트래픽(80/tcp)을 허용하며 이름이 Firewall rule 인 방화벽 규칙을 만듭니다.
@@ -142,6 +133,12 @@ gcloud compute firewall-rules create sdk-fw \
 
 $`gcloud compute http-health-checks create sdk-hc`
 
+```
+gcloud compute instance-groups managed \
+          set-named-ports sdk-mig \
+          --named-ports http:80 \
+          --region us-east1
+```
 
 
 ## Create a backend service, and attach the managed instance group with named port (http:80).
