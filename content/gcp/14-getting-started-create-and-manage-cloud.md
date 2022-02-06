@@ -112,10 +112,10 @@ $`gcloud compute target-pools create sdk-tp`
 > 관리형 인스턴스 그룹을 만듭니다.
 
 ```
-gcloud compute instance-groups managed create sdk-ig \
+gcloud compute instance-groups managed create sdk-mig \
           --base-instance-name sdk-server \
           --size 2 \
-          --template sdk-server-template \
+          --template sdk-it \
           --region us-east1 \
           -–target-pool sdk-tp       
 ```
