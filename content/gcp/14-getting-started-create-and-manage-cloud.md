@@ -4,7 +4,7 @@ metaTitle: "Create and Manage Cloud Resources: Challenge Lab"
 metaDescription: "Create and Manage Cloud Resources: Challenge Lab"
 ---
 
-## Naming Rules 
+## ✅ Naming Rules 
 |GCP|Code|
 |------|---|
 |Load balance| lb|
@@ -20,7 +20,7 @@ metaDescription: "Create and Manage Cloud Resources: Challenge Lab"
   
 # Task 1. Create a project jumphost instance
 
-✅ ☰ > [Compute Engine] > [VM instances] > [Create]
+☰ > [Compute Engine] > [VM instances] > [Create]
 
 ✔︎ Cloud Shell 
 ```
