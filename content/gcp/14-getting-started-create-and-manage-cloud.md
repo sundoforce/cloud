@@ -18,6 +18,8 @@ metaDescription: "Create and Manage Cloud Resources: Challenge Lab"
 |backend-services| bs| 
 |clusters| clusters|
   
+
+            
 # Task 1. Create a project jumphost instance
 
 ☰ > [Compute Engine] > [VM instances] > [Create]
@@ -28,10 +30,11 @@ gcloud compute instances create {instance-name} \
   --zone us-east1-b  \
   --machine-type f1-micro  \
   --image-family debian-9  \
-  --image-project debian-cloud
-      
+  --image-project debian-cloud \
+  --network sdk-vpc     
 ```
-
+  
+`--network sdk-vpc`   
 
 # Task 2. Create a Kubernetes service cluster
 
@@ -99,7 +102,10 @@ EOF
 
 ```
 gcloud compute instance-templates create sdk-it \
-  --metadata-from-file startup-script=startup.sh 
+  --metadata-from-file startup-script=startup.sh \
+  --network sdk-vpc \
+  --machine-type f1-micro \
+  --region us-east1
 
 ```
 
@@ -124,8 +130,10 @@ gcloud compute instance-groups managed create sdk-mig \
 > 트래픽(80/tcp)을 허용하며 이름이 Firewall rule 인 방화벽 규칙을 만듭니다.
 
 ```
-gcloud compute firewall-rules create sdk-fw \
-          --allow tcp:80 
+gcloud compute firewall-rules create {role-name} \
+          --allow tcp:80 \
+          --network sdk-vpc \
+          --rules=tcp:80
 ```
 
 ## Create a health check.
@@ -148,6 +156,13 @@ gcloud compute instance-groups managed \
 gcloud compute backend-services create sdk-bs \
           --protocol HTTP \
           --http-health-checks sdk-hc \
+          --global
+```
+
+```
+gcloud compute backend-services add-backend sdk-bs \
+          --instance-group sdk-mig \
+          --instance-group-region us-east1 \
           --global
 ```
 
@@ -177,6 +192,4 @@ $`gcloud compute forwarding-rules list`
 
 ## Reference Links
 https://github.com/codeGarry/Getting-Started-Create-and-Manage-Cloud-Resources-Challenge-Lab/blob/master/New%20Text%20Document.txt   
-https://www.onlineintercollege.com/2021/03/getting-started-create-and-manage-cloud.html  
-https://janvijain.github.io/Qwiklabs-Create-and-Manage-Cloud-Resources-Challenge-Lab/  
 
