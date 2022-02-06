@@ -136,16 +136,19 @@ gcloud compute firewall-rules create {role-name} \
 
 $`gcloud compute http-health-checks create sdk-hc`
 
+
+
+## Create a backend service, and attach the managed instance group with named port (http:80).
+> 백엔드 서비스를 만들고 관리형 인스턴스 그룹과 이름을 지정한 포트(http:80)를 연결합니다.  
+
+### 관리형 instance-groups managed (sdk-mig)
 ```
 gcloud compute instance-groups managed \
           set-named-ports sdk-mig \
           --named-ports http:80 \
           --region us-east1
 ```
-
-
-## Create a backend service, and attach the managed instance group with named port (http:80).
-> 백엔드 서비스를 만들고 관리형 인스턴스 그룹과 이름을 지정한 포트(http:80)를 연결합니다.  
+## 백엔드 서비스 (sdk-bs)
 
 ```
 gcloud compute backend-services create sdk-bs \
@@ -154,6 +157,7 @@ gcloud compute backend-services create sdk-bs \
           --global
 ```
 
+## 포트 연결 
 ```
 gcloud compute backend-services add-backend sdk-bs \
           --instance-group sdk-mig \
