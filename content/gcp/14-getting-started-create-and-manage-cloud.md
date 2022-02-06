@@ -164,7 +164,7 @@ gcloud compute target-http-proxies create http-lb-proxy \
 ```
 gcloud compute forwarding-rules create http-content-rule \
         --global \
-        --target-http-proxy http-lb-proxy \
+        --target-http-proxy sdk-hc \
         --ports 80
 ```
 방화벽 확인 
