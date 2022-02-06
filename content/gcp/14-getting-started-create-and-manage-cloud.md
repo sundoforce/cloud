@@ -31,10 +31,8 @@ gcloud compute instances create {instance-name} \
   --machine-type f1-micro  \
   --image-family debian-9  \
   --image-project debian-cloud \
-  --network sdk-vpc     
 ```
   
-`--network sdk-vpc`   
 
 # Task 2. Create a Kubernetes service cluster
 
@@ -103,7 +101,6 @@ EOF
 ```
 gcloud compute instance-templates create sdk-it \
   --metadata-from-file startup-script=startup.sh \
-  --network sdk-vpc \
   --machine-type f1-micro \
   --region us-east1
 
