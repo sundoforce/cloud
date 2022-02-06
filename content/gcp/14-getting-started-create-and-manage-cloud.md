@@ -156,18 +156,22 @@ gcloud compute backend-services create sdk-bs \
 
 ## Create a URL map, and target the HTTP proxy to route requests to your URL map.  
 > URL 맵을 만들고 URL 맵에 요청을 라우팅할 대상 HTTP 프록시를 설정합니다.
+```
+ gcloud compute url-maps create sdk-map \
+  --default-service sdk-bs
+```
 
 ```
-gcloud compute target-http-proxies create http-lb-proxy \
+gcloud compute target-http-proxies create sdk-proxy \
           --url-map sdk-map
 ```
 ## Create a forwarding rule.
 > 전달 규칙을 만듭니다.  
 
 ```
-gcloud compute forwarding-rules create http-content-rule \
+gcloud compute forwarding-rules create sdk-fwd-rule \
         --global \
-        --target-http-proxy sdk-hc \
+        --target-http-proxy sdk-proxy \
         --ports 80
 ```
 방화벽 확인 
