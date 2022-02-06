@@ -99,7 +99,7 @@ EOF
 
 ```
 gcloud compute instance-templates create sdk-it \
-  --metadata-from-file startup-script=startup.sh \
+  --metadata-from-file startup-script=startup.sh 
 
 ```
 
