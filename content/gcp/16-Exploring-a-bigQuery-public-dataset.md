@@ -48,4 +48,5 @@ ORDER BY count DESC LIMIT 5
 * [bq 명령줄 도구 사용](https://cloud.google.com/bigquery/docs/bq-command-line-tool)  
 * [BigQuery API 클라이언트 라이브러리 ](https://cloud.google.com/bigquery/docs/reference/libraries)
 * [BigQuery API](https://cloud.google.com/bigquery/docs/reference/rest)  
-* https://www.ssa.gov/OACT/babynames/background.html
+* https://www.ssa.gov/OACT/babynames/background.html  
+* [데이터 세트 위치](https://cloud.google.com/bigquery/docs/locations)  
