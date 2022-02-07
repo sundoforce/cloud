@@ -6,7 +6,10 @@ metaDescription: "Exploring a BigQuery Public Dataset"
 
 # Task 1. Query a public dataset
 ## Load the USA Names dataset
+[Big Query] > [ADD DATA] > [Public Datasets]  
 ## Query the USA Names dataset
+[query editor]
+
 ```
 SELECT
   name, gender,
@@ -23,11 +26,13 @@ LIMIT
 
 # Task 2. Create a custom table
 
+
 # Task 3. Create a dataset
 
 # Task 4. Load the data into a new table  
  
 # Task 5. Query the table
+[Compose new query] 
 ```
 SELECT
  name, count
