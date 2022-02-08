@@ -10,7 +10,7 @@ const config = {
     logoLink: 'https://cloudmap.cloud',
     title:
       "<a href='https://cloudmap.cloud/'>Cloud Map</a>",
-    githubUrl: 'https://github.com/sundoforce/cloudmap',
+    githubUrl: 'https://github.com/sundoforce/cloud',
     helpUrl: '',
     tweetText: '',
     social: `<li>
