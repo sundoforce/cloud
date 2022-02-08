@@ -12,7 +12,7 @@ Compute Engine default service account
 `{project-number}-compute@developer.gserviceaccount.com`에   `edit` 권한이 있는지 확인 
 # Task 1. Create a Cloud SQL instance  
   ☰ > SQL > Create instance > Choose MySQL   
-  [Create]
+  [Create]  
 ![image](https://user-images.githubusercontent.com/16316626/152930977-dc97e190-8fcb-4a85-92be-5e7ac8a387f0.png)
 
 # Task 2. Create tables
@@ -44,7 +44,8 @@ mysql>
 ```
 
 
-`MySQL > SHOW DATABASES;`
+`MySQL > SHOW DATABASES;`  
+
 ```
 > SHOW DATABASES;
   
@@ -148,15 +149,17 @@ gsutil cat gs://$DEVSHELL_PROJECT_ID/accommodation.csv
 ```
 
 
-# Task 4. Load data from Cloud Storage into Cloud SQL tables
-import 합니다.  
-생성한 `rental` 에 접속 한 뒤 아래의 파일 2개를 import 합니다.  
+# Task 4. Load data from Cloud Storage into Cloud SQL tables  
+ 
+생성한 `rental` 에 접속 한 뒤 아래의 파일 2개를 import 합니다.   
+
 * accommodation.csv 
 * rating.csv
 
  
 
- Browse > [Your-Bucket-Name] > accommodation.csv
+ Browse > [Your-Bucket-Name] > accommodation.csv  
+ 
  ![image](https://user-images.githubusercontent.com/16316626/152932806-f1adeb4e-4da9-4b21-992b-8941dee22d3c.png)
 
 
