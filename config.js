@@ -6,7 +6,7 @@ const config = {
     trailingSlash: false,
   },
   header: {
-    logo: 'https://brand.svg',
+    logo: 'https://cdn.svgporn.com/logos/google-cloud.svg',
     logoLink: 'https://cloudmap.cloud',
     title:
       "<a href='https://cloudmap.cloud/'>Cloud Map</a>",
