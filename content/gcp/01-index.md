@@ -30,6 +30,7 @@ zone, region 가져오기
 gcloud config get-value compute/zone
 gcloud config get-value compute/region
 
+
 ### 제대로 되지 않은 경우 
 Click Navigation menu (Navigation menu), and then click Home > Dashboard.
 ```
@@ -39,6 +40,12 @@ gcloud compute project-info describe --project <your_project_ID>
 ```
 export PROJECT_ID=<your_project_ID>
 export ZONE=<your_zone>
+```
+
+## 확인 
+```
+gcloud auth list
+gcloud config list project
 ```
 ## VM 생성 
 
