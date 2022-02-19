@@ -1,15 +1,15 @@
 const config = {
   gatsby: {
     pathPrefix: '/',
-    siteUrl: 'https://cloudmap.cloud',
+    siteUrl: 'https://cloud.sdk.xyz',
     gaTrackingId: null,
     trailingSlash: false,
   },
   header: {
     logo: 'https://cdn.svgporn.com/logos/google-cloud.svg',
-    logoLink: 'https://cloudmap.cloud',
+    logoLink: 'https://cloud.sdk.xyz',
     title:
-      "<a href='https://cloudmap.cloud/'>Cloud Map</a>",
+      "<a href='https://cloud.sdk.xyz/'>Cloud</a>",
     githubUrl: 'https://github.com/sundoforce/cloud',
     helpUrl: '',
     tweetText: '',
@@ -55,7 +55,7 @@ const config = {
     frontline: false,
     ignoreIndex: true,
     title:
-      "<a href='https://cloudmap.cloud'>cloudMap</a><div class='greenCircle'></div><a href='https://javascript.ac'>Javascript</a>",
+      "<a href='https://cloud.sdk.xyz'>cloud</a><div class='greenCircle'></div><a href='https://javascript.sdk.xyz'>Javascript</a>",
   },
   siteMetadata: {
     title: 'Cloud Map | sdk',
@@ -67,8 +67,8 @@ const config = {
   pwa: {
     enabled: false, // disabling this will also remove the existing service worker.
     manifest: {
-      name: 'Cloud Map',
-      short_name: 'CloudMap',
+      name: 'Cloud',
+      short_name: 'cloud',
       start_url: '/',
       background_color: '#6b37bf',
       theme_color: '#6b37bf',
