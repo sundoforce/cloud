@@ -55,7 +55,7 @@ const config = {
     frontline: false,
     ignoreIndex: true,
     title:
-      "<a href='https://cloud.sdk.xyz'>cloud</a><div class='greenCircle'></div><a href='https://javascript.sdk.xyz'>Javascript</a>",
+      "<a href='https://thundercloud.day'>Thundercloud</a><div class='greenCircle'></div><a href='https://javascript.sdk.xyz'>Javascript</a>",
   },
   siteMetadata: {
     title: 'Cloud Map | sdk',
