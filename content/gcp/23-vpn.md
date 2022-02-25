@@ -17,13 +17,11 @@ In the Cloud Console, on the Navigation menu (Navigation menu), click VPC networ
 
 Click Reserve static address.
 
+![image](https://user-images.githubusercontent.com/16316626/155678612-87e91a89-7473-4536-a9a0-cef9ef89ac48.png)
+![image](https://user-images.githubusercontent.com/16316626/155678625-18f55ec8-bcae-4226-9fda-8f96917458ca.png)
+![image](https://user-images.githubusercontent.com/16316626/155678652-619c4583-20ff-4a1f-9ef2-195d48a240ef.png)
 
-![img.png](img.png)
 
-![img_1.png](img_1.png)
-
-
-![img_2.png](img_2.png)
 
 각 각 역방향 reverse VPN 을 예약 해 준 뒤 ,
 External IP를 삭제 합니디다.
