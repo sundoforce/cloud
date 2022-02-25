@@ -38,6 +38,7 @@ const config = {
   },
   sidebar: {
     forcedNavOrder: [
+      '/introduction', // add trailing slash if enabled above
       '/qwiklabs', // add trailing slash if enabled above
       '/gcp',
       '/aws',
