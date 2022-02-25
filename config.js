@@ -44,11 +44,10 @@ const config = {
       '/azure',
     ],
     collapsedNav: [
-      '/codeblock', // add trailing slash if enabled above
       '/aws', // add trailing slash if enabled above
       '/azure', // add trailing slash if enabled above
     ],
-    links: [{ text: 'Amazon Group', link: 'https://www.facebook.com/groups/awskr'}, 
+    links: [{ text: 'Amazon Group', link: 'https://www.facebook.com/groups/awskr'},
             { text: 'Azure Group', link: 'https://www.facebook.com/groups/azurekr' },
             { text: 'GCP Group', link: 'https://www.facebook.com/groups/gcpkr'},
             { text: 'Terraform Group', link: 'https://www.facebook.com/groups/terraform'}],
