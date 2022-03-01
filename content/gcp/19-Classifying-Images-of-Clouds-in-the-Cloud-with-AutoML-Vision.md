@@ -84,6 +84,9 @@ Confidence threshold
 # Task 7. Generate predictions  
 [Test & Use]  
 Model  >  Upload images    
+<img width="2032" alt="스크린샷 2022-02-08 19 03 49" src="https://user-images.githubusercontent.com/16316626/156086005-86b3baaf-e79e-4468-a99d-27e0d8a93093.png">
+<img width="674" alt="스크린샷 2022-02-08 19 04 40" src="https://user-images.githubusercontent.com/16316626/156086021-92eb8bb5-c8f0-4b52-b894-8f362e6f6359.png">
+<img width="1072" alt="스크린샷 2022-02-08 19 05 20" src="https://user-images.githubusercontent.com/16316626/156086023-8b4270cd-3076-4006-a10f-0f3ca8552394.png">
 
 
 
